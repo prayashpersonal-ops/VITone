@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VITone - VIT Bhopal Student Hub | Mess Menu, PYQs, Services</title>
+
+<meta name="description" content="Check latest VIT Bhopal mess menu, previous year papers, cab services and student tools on VITone.">
+
+<meta name="keywords" content="VIT Bhopal mess menu, vitone, vit bhopal food, hostel menu vit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* Footer */
+.footer {
+  background: #0d2645;
+  color: #cbd5f5;
+  padding: 50px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Follow button */
+.footer-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #1e40af;
+  color: white !important;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  background: #2563eb;
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .footer-section p {
+    font-size: 13px;
+  }
+}
+    
+.btn, .card, nav ul li {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button, .card {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+/* Navbar */
+nav {
+  background: #0d2645;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  color: #60a5fa;
+}
+
+/* Hero */
+.hero {
+  margin-top: 65px;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: gray;
+}
+
+/* ✅ Instagram Button */
+.insta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  color: #111827;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.insta-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.insta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+
+  nav {
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .hero {
+    margin-top: 20px;
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .insta-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  .insta-btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+}
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <h2><span style="color: rgb(38, 75, 242); font-size: 30px;">VIT</span>one</h2>
+  <ul>
+    <li onclick="window.location.href='index.html'">Home</li>
+    <li onclick="window.location.href='messmenu.html'">Mess Menu</li>
+    <li onclick="window.location.href='pyq.html'">PYQs</li>
+    <li onclick="window.location.href='cabs.html'">Cabs</li>
+    <li onclick="window.location.href='food.html'">Food Delivery</li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>All you need in <span style="color: #20436f">ONE</span> place</h1>
+  <p>Mess Menu • PYQs • Cabs • Food Delivery</p>
+
+  <!-- ✅ Fixed Instagram -->
+  <a href="https://www.instagram.com/vitoneforyou" class="insta-btn" target="_blank">
+    <img src="insta logo.jpg" alt="Instagram">
+    @vitoneforyou
+  </a>
+</section>
+
+<section id="pyqs">
+  <h2 style="text-align:center; font-size:65px; color:#20436f;">Our Services</h2>
+
+  <div class="card-container">
+
+    <div class="card" onclick="window.location.href='messmenu.html'">
+      <h3>Mess Menus</h3>
+      <p>see what's cooking..</p>
+    </div>
+
+    <div class="card" onclick="window.location.href='pyq.html'">
+      <h3>Previous Year Questions</h3>
+      <p>to help you prepare well</p>
+    </div>
+
+    <div class="card" onclick="window.location.href='cabs.html'">
+      <h3>Cab Services</h3>
+      <p>inter-city cabs at affordable prices</p>
+    </div>
+
+    <div class="card" onclick="window.location.href='food.html'">
+      <h3>Food Delivery</h3>
+      <p>special block to your DOORSTEP</p>
+    </div>
+
+  </div>
+</section>
+ <footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>
+        This site is built by Prayash, Devangpreet and Abhinav in a college dorm room (B347).  
+        We are 2025 batch students.
+      </p>
+      <p style="margin-top:10px;">
+        Instagram:
+        <a href="https://www.instagram.com/vitoneforyou" target="_blank">@vitoneforyou</a>
+      </p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="footer-section">
+      <h3>Note</h3>
+      <p>
+        This website is built for the students of VIT (mainly VIT Bhopal) and is not officially affiliated with VIT.
+      </p>
+    </div>
+
+    <!-- FAQs -->
+    <div class="footer-section">
+      <h3>FAQs</h3>
+      <p><strong>How is this site maintained?</strong></p>
+      <p>• Our friends from different messes tell us about menu changes.</p>
+      <p>• We upload question papers regularly.</p>
+      <p>
+        • You can also upload papers here:
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrMFwhzIjf3OqzNUXdU8lGzbsMo_K9yBhq0FvJgDEKq9fL2g/viewform?usp=dialog" target="_blank">Submit PYQs</a>
+      </p>
+
+      <p style="margin-top:10px;">
+        For any queries, DM us:
+        <a href="https://www.instagram.com/vitoneforyou" target="_blank">Instagram</a>
+      </p>
+    </div>
+
+    <!-- Follow -->
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <p>
+        Follow us on Instagram so you don’t miss any updates.
+      </p>
+      <a href="https://www.instagram.com/vitoneforyou" target="_blank" class="footer-btn">
+        @vitoneforyou
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Mess Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+    /* Footer */
+.footer {
+  background: #0d2645;
+    color: #cbd5f5;
+    padding: 50px 20px;
+    
+    margin-top: 150px;
+    margin-left: -20px;
+    margin-right: -20px;
+   
+  width: 100%;
+}
+
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Follow button */
+.footer-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #1e40af;
+  color: white !important;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  background: #2563eb;
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  @media (max-width: 600px) {
+  .footer {
+    padding: 20px;
+    display: none;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+}
+   body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+}
+
+/* Add padding ONLY to content, not whole page */
+h1, table {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+    h1 {
+        text-align: center;
+        color: #0b1f3a;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        background: white;
+    }
+
+    th {
+        background-color: #0b1f3a;
+        color: white;
+        padding: 14px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    td {
+        padding: 14px;
+        vertical-align: top;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f6fc;
+    }
+
+    tr:hover {
+        background-color: #e6eefc;
+    }
+
+    .day {
+        background-color: #132c52;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        width: 120px;
+    }
+
+</style>
+</head>
+
+<body>
+    
+
+<h1>Weekly Mess Menu</h1>
+
+<table>
+    <tr>
+        <th>Day</th>
+        <th>Breakfast</th>
+        <th>Lunch</th>
+        <th>Snacks</th>
+        <th>Dinner</th>
+    </tr>
+
+    <tr>
+        <td class="day">Sunday</td>
+        <td>Masala Dosa / Mix Veg Dosa, Sambhar, Chutney, Sprouts, Banana, Boiled Egg, Bread, Butter, Jam, Tea, Milk, Coffee</td>
+        <td>Roti (Plain), Veg Biryani, Chicken Biryani, Butter Paneer Masala, Dal Kolhapuri, Onion Raita, Pickle</td>
+        <td>White / Red Sauce Pasta,Tea, Coffee, Milk</td>
+        <td>Roti, Aloo with Peas Masala, Dal Makhani, South Indian Plain Rice, Bhindi Poriyal, Paruppu Rasam, Veg Sorba Soup, Gulab Jamun</td>
+    </tr>
+
+    <tr>
+        <td class="day">Monday</td>
+        <td>Idli, Vada, Sambhar, Chutney, Banana, Bread, Butter, Jam, Tea, Milk, Coffee</td>
+        <td>Tawa Roti, Jeera Aloo / Sev Tamatar, Dal Fry, Buttermilk, Mix Salad, Plain Rice, Kuzhambu, Raw Banana Poriyal, Pepper Rasam</td>
+        <td>Kachori, Tamarind Chutney, Tea, Milk, Coffee</td>
+        <td>Butter Roti / Plain Roti, Kadhai Mix Veg, Egg Gravy, Multi Grain Khichdi, Veg Poriyal, Plain Rice, Tomato Rasam,Pickle</td>
+    </tr>
+
+    <tr>
+        <td class="day">Tuesday</td>
+        <td>Poha, Jalebi, Pongal, Chutney,Bread, Butter, Jam, Tea, Milk</td>
+        <td>Puri, White Channa (Medium Spicy), Mix Dal, Mix Salad, South Indian Plain Rice, Bottle Gourd Kuzhambu, Tomato Rasam,Buttermilk,Pickle</td>
+        <td>Variety of Samosa, Red Sauce, Green Chutney, Tea, Coffee, Milk</td>
+        <td>Butter Roti / Plain Roti, Fruit Custard, Bhindi Masala, Dal Tadka, Plain Rice, Pepper Rasam,Pickle</td>
+    </tr>
+
+    <tr>
+        <td class="day">Wednesday</td>
+        <td>Pav Bhaji / Upma, Chutney, Sprouts, Banana, Boiled Egg, Bread, Butter, Jam, Tea, Milk</td>
+        <td>Roti, Veg Kofta, Dal Tadka, Mutter Pulao, Fryums, Sweet Boondi,South Indian Plain Rice, Vegetable Sambhar, Paruppu Rasam,Pickle</td>
+        <td>Cutlet (2 Nos), Red Chilli Sauce, Tea, Coffee, Milk</td>
+        <td>Butter Roti, Paneer Masala, Kadhai Chicken Masala, Plain Dal, Plain Rice, Jeera Rasam</td>
+    </tr>
+
+    <tr>
+        <td class="day">Thursday</td>
+        <td>Aloo Paratha, Dahi, Banana, Bread, Butter, Jam, Tea, Milk</td>
+        <td>Roti (Plain), Rajma, Jeera Rice, Seasonal Veg, Onion Salad, Plain Rice, Veg Sambhar, Beetroot Poriyal, Rasam,Pickle</td>
+        <td>Noodles / Fried Idli, Coconut Chutney, Tea, Coffee, Milk</td>
+        <td>Butter Roti / Plain Roti, Egg Gravy, Green Peas Masala, Dal Fry, Jeera Rice, Sooji Halwa,Pepper Rasam,Pickle</td>
+    </tr>
+
+    <tr>
+        <td class="day">Friday</td>
+        <td>Onion Uttapam, Onion Tomato Chutney, Sprouts, Fruit Salad, Boiled Egg, Bread, Butter, Jam, Tea, Milk</td>
+        <td>Roti (Plain), Kadhi Pakoda, Dal Fry, Plain Rice, Mix Salad,South Indian Plain Rice, Brinjal Kuzhambu, Veg Avial,Pickle</td>
+        <td>Vada Pav, Green Chutney, Tea, Coffee, Milk</td>
+        <td>Plain Roti, Tandoori Butter Chicken Gravy,KadhaiPaneer, Dal Tadka, Plain Rice, Puli Rasam(Tamarind),Pickle</td>
+    </tr>
+
+    <tr>
+        <td class="day">Saturday</td>
+        <td>Chole with Lemon Slice, Bhature, Sprouts, Fruit Salad, Banana, Tea, Milk</td>
+        <td>Roti (Plain), Corn Palak, Ghee Rice, Dal Makhani, South Indian Rice, Potato Kara Poriyal,Butter milk,Mix Veg Sambhar, Rasam,Pickle</td>
+        <td>Bread Pakoda, Red Tomato Chutney, Tea, Coffee, Milk</td>
+        <td>Plain Roti, Veg Pulao, Lobia Gravy, Thoor Dal Fry, South Indian Plain Rice, Paruppu Rasam,Pickle</td>
+    </tr>
+
+</table>
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>
+        This site is built by Prayash, Devangpreet and Abhinav in a college dorm room (B347).  
+        We are 2025 batch students.
+      </p>
+      <p style="margin-top:10px;">
+        Instagram:
+        <a href="https://www.instagram.com/vitoneforyou" target="_blank">@vitoneforyou</a>
+      </p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="footer-section">
+      <h3>Note</h3>
+      <p>
+        This website is built for the students of VIT (mainly VIT Bhopal) and is not officially affiliated with VIT.
+      </p>
+    </div>
+
+    <!-- FAQs -->
+    <div class="footer-section">
+      <h3>FAQs</h3>
+      <p><strong>How is this site maintained?</strong></p>
+      <p>• Our friends from different messes tell us about menu changes.</p>
+      <p>• We upload question papers regularly.</p>
+      <p>
+        • You can also upload papers here:
+        <a href="YOUR_GFORM_LINK" target="_blank">Submit PYQs</a>
+      </p>
+
+      <p style="margin-top:10px;">
+        For any queries, DM us:
+        <a href="https://www.instagram.com/vitoneforyou" target="_blank">Instagram</a>
+      </p>
+    </div>
+
+    <!-- Follow -->
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <p>
+        Follow us on Instagram so you don’t miss any updates.
+      </p>
+      <a href="https://www.instagram.com/vitoneforyou" target="_blank" class="footer-btn">
+        @vitoneforyou
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>

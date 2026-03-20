@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Previous Year Question Paper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+  .submitpyq{
+    text-decoration: none; color: grey; border: 2px solid grey; border-radius: 9px; padding: 6px;
+  }
+  .submitpyq:hover{
+    color: #9ca3af;
+  }
+    .btn, .card, nav ul li {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button, .card {
+  -webkit-tap-highlight-color: transparent;
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+    }
+
+    nav {
+      background: #0d2645;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h2 {
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+    }
+
+    nav ul li:hover {
+      color: #60a5fa;
+    }
+
+    .hero {
+      margin-top: 60px;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    #pyqs {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    #pyqs h2 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    /* SEARCH BAR */
+    #searchBar {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #9ca3af;
+      letter-spacing: 1px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    
+    /* Footer */
+.footer {
+  background: #0d2645;
+  color: #cbd5f5;
+  padding: 50px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Follow button */
+.footer-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #1e40af;
+  color: white !important;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  background: #2563eb;
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .footer-section p {
+    font-size: 13px;
+  }
+    nav {
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2><span style="color: rgb(38, 75, 242); font-size: 30px;">VIT</span>one</h2>
+    <ul>
+      <li onclick="window.location.href='index.html'">Home</li>
+      <li onclick="window.location.href='messmenu.html'">Mess Menu</li>
+      <li onclick="window.location.href='pyq.html'">PYQs</li>
+      <li onclick="window.location.href='cabs.html'">Cabs</li>
+      <li onclick="window.location.href='food.html'">Food Delivery</li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Previous Year Question Papers</h1>
+    <br>
+    <a class="submitpyq" href="https://docs.google.com/forms/d/e/1FAIpQLSdrMFwhzIjf3OqzNUXdU8lGzbsMo_K9yBhq0FvJgDEKq9fL2g/viewform?usp=dialog" target="_blank">Submit PYQs</a>
+  </section>
+
+  <section id="pyqs">
+    <h2>Courses</h2>
+
+    <!-- SEARCH BAR -->
+    <input type="text" id="searchBar" placeholder="Search course...">
+
+    <div class="card-container">
+
+      <div class="card" onclick="window.location.href='CHY1005.html'">
+        <h3>Introduction to Computational Chemistry</h3>
+        <p>CHY1005</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='MAT1031.html'">
+        <h3>Calculus</h3>
+        <p>MAT1031</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='ENG1004.html'">
+        <h3>Effective Technical Communication</h3>
+        <p>ENG1004</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='CSE1021.html'">
+        <h3>Introduction to Problem Solving</h3>
+        <p>CSE1021</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='PHY1003.html'">
+        <h3>Introduction to Computational Physics</h3>
+        <p>PHY1003</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='MAT2101.html'">
+        <h3>Application of Difference Equation</h3>
+        <p>MAT2101</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='CSA2001.html'">
+        <h3>Fundamentals of AI and ML</h3>
+        <p>CSA2001</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='MAT3002.html'">
+        <h3>Applied Linear Algebra</h3>
+        <p>MAT3002</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='CHY1003.html'">
+        <h3>Biochemistry</h3>
+        <p>CHY1003</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='MAT1001.html'">
+        <h3>Calculus and Laplance Transform</h3>
+        <p>MAT1001</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='EEE1001.html'">
+        <h3>Electric Circuits and Systems</h3>
+        <p>EEE1001</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='PHY1001.html'">
+        <h3>Engineering Physics</h3>
+        <p>PHY1001</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='CHY1006.html'">
+        <h3>Enviormental Sustainability</h3>
+        <p>CHY1006</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='BIO2001.html'">
+        <h3>Human Physiology</h3>
+        <p>BIO2001</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='CSE2006.html'">
+        <h3>Java</h3>
+        <p>CSE2006</p>
+      </div>
+
+   
+
+      <div class="card" onclick="window.location.href='CSD1001.html'">
+        <h3>Principles of Digital Forensics</h3>
+        <p>CSD1001</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='ENG2005.html'">
+        <h3>Advanced Technical Communication</h3>
+        <p>ENG2005</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='MAT2005.html'">
+        <h3>Transform Technique and Difference Equation</h3>
+        <p>MAT2005</p>
+      </div>
+
+    </div>
+  </section>
+ <footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>
+        This site is built by Prayash, Devangpreet and Abhinav in a college dorm room (B347).  
+        We are 2025 batch students.
+      </p>
+      <p style="margin-top:10px;">
+        Instagram:
+        <a href="https://www.instagram.com/vitoneforyou" target="_blank">@vitoneforyou</a>
+      </p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="footer-section">
+      <h3>Note</h3>
+      <p>
+        This website is built for the students of VIT (mainly VIT Bhopal) and is not officially affiliated with VIT.
+      </p>
+    </div>
+
+    <!-- FAQs -->
+    <div class="footer-section">
+      <h3>FAQs</h3>
+      <p><strong>How is this site maintained?</strong></p>
+      <p>• Our friends from different messes tell us about menu changes.</p>
+      <p>• We upload question papers regularly.</p>
+      <p>
+        • You can also upload papers here:
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrMFwhzIjf3OqzNUXdU8lGzbsMo_K9yBhq0FvJgDEKq9fL2g/viewform?usp=dialog" target="_blank">Submit PYQs</a>
+      </p>
+
+      <p style="margin-top:10px;">
+        For any queries, DM us:
+        <a href="https://www.instagram.com/vitoneforyou" target="_blank">Instagram</a>
+      </p>
+    </div>
+
+    <!-- Follow -->
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <p>
+        Follow us on Instagram so you don’t miss any updates.
+      </p>
+      <a href="https://www.instagram.com/vitoneforyou" target="_blank" class="footer-btn">
+        @vitoneforyou
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  <!-- SEARCH SCRIPT -->
+  <script>
+    const searchBar = document.getElementById("searchBar");
+    const cards = document.querySelectorAll(".card");
+
+    searchBar.addEventListener("keyup", function () {
+      const value = this.value.toLowerCase();
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(value) ? "block" : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
