@@ -4,8 +4,30 @@
   <title>Mess Menu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    
-    .footer {
+  
+html {
+  scroll-behavior: smooth;
+}
+
+/* NEW: Page load animation */
+body {
+  background-color: #334155;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+.footer {
   background: #0d2645;
   color: #cbd5f5;
   padding: 50px 20px;
@@ -34,13 +56,13 @@
 .footer-section a {
   color: #60a5fa;
   text-decoration: none;
+  transition: 0.3s; /* NEW */
 }
 
 .footer-section a:hover {
   text-decoration: underline;
 }
 
-/* Follow button */
 .footer-btn {
   display: inline-block;
   margin-top: 10px;
@@ -54,21 +76,11 @@
 
 .footer-btn:hover {
   background: #2563eb;
+  transform: translateY(-2px); /* NEW */
 }
 
-/* 📱 Mobile */
+/* Mobile */
 @media (max-width: 600px) {
-  .footer {
-    padding: 40px 15px;
-  }
-
-  .footer-section h3 {
-    font-size: 16px;
-  }
-
-  .footer-section p {
-    font-size: 13px;
-  }
   nav ul li{
     display: none;
   }
@@ -76,82 +88,108 @@
     justify-content: center;
     display: none;
   }
-  
 }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
 
-    body {
-      background-color: #334155;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    nav {
-      background: #0d2645;
-      color: white;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-    }
+/* Navbar */
+nav {
+  background: #0d2645;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+}
 
-    nav ul {
-      padding-top: 6px;
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
+nav ul {
+  padding-top: 6px;
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
 
-    nav ul li {
-      cursor: pointer;
-    }
+nav ul li {
+  cursor: pointer;
+  transition: 0.3s; /* NEW */
+}
 
-    nav ul li:hover {
-      color: #60a5fa;
-    }
+nav ul li:hover {
+  color: #60a5fa;
+}
 
-    .main {
-      height: calc(100vh - 70px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+/* Title animation */
+h2 {
+  animation: fadeIn 1s ease-in-out; /* NEW */
+}
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-    }
+/* Main container */
+.main {
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    select {
-      padding: 10px;
-      border-radius: 10px;
-      background: #1e293b;
-      color: white;
-      width: 320px;
-    }
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
 
-    .menu-box {
-      background: rgba(30, 41, 59, 0.7);
-      padding: 25px;
-      border-radius: 16px;
-      color: white;
-      width: 340px;
-    }
+/* Dropdown */
+select {
+  padding: 12px;
+  border-radius: 12px;
+  background: #1e293b;
+  color: white;
+  width: 320px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s; /* NEW */
+}
 
-    .menu-box h2 {
-      text-align: center;
-      color: #38bdf8;
-    }
+select:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 
-    .menu-text p {
-      margin: 10px 0;
-      font-size: 14px;
-    }
-  </style>
+/* Menu box */
+.menu-box {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px); /* NEW */
+  padding: 25px;
+  border-radius: 16px;
+  color: white;
+  width: 340px;
+  transition: 0.3s; /* NEW */
+  border: 1px solid rgba(255,255,255,0.08); /* NEW */
+}
+
+.menu-box:hover {
+  transform: translateY(-5px) scale(1.01); /* NEW */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.menu-box h2 {
+  text-align: center;
+  color: #38bdf8;
+}
+
+.menu-text p {
+  margin: 10px 0;
+  font-size: 14px;
+  transition: 0.3s; /* NEW */
+}
+
+.menu-text p:hover {
+  color: #e2e8f0; /* subtle highlight */
+}
+</style>
 </head>
 
 <body>
@@ -166,6 +204,7 @@
     <li onclick="window.location.href='food.html'">Food Delivery</li>
   </ul>
 </nav>
+<h2 style="text-align: center; color: aliceblue;padding-top:100px;">VIT Bhopal Mess Menu</h2>
 
 <div class="main">
   <div class="container">
@@ -200,7 +239,7 @@ const baseMenu = {
     breakfast: "Idli, Vada, Sambhar, Chutney, Banana, Bread, Butter, Jam, Tea, Milk, Coffee",
     lunch: "Tawa Roti, Jeera Aloo / Sev Tamatar, Dal Fry, Buttermilk, Salad, Rice, Kuzhambu, Raw Banana Poriyal, Pepper Rasam",
     snacks: "Kachori, Tamarind Chutney, Tea, Milk, Coffee",
-    dinner: "Butter Roti / Plain Roti, Kadhai Mix Veg, Egg Gravy, Multi Grain Khichdi, Veg Poriyal, Rice, Tomato Rasam, Pickle"
+    dinner: "Butter Roti / Plain Roti, Kadhai Mix Veg, Egg Gravy, Kheer, Multi Grain Khichdi, Veg Poriyal, Rice, Tomato Rasam, Pickle"
   },
   Tuesday: {
     breakfast: "Poha, Jalebi, Pongal, Chutney, Bread, Butter, Jam, Tea, Milk",
