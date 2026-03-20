@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<head>
   <meta charset="UTF-8">
-  <title>VITone - VIT Bhopal Student Hub | Mess Menu, PYQs, Services</title>
-
-<meta name="description" content="Check latest VIT Bhopal mess menu, previous year papers, cab services and student tools on VITone.">
-
-<meta name="keywords" content="VIT Bhopal mess menu, vitone, vit bhopal food, hostel menu vit">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Primary SEO -->
+  <title>VITone | VIT Bhopal Mess Menu, PYQs, Student Tools</title>
+
+  <meta name="description" content="VITone helps VIT Bhopal students with mess menu, previous year papers, cab services, tools and everything in one place.">
+
+  <meta name="keywords" content="VIT Bhopal mess menu, VITone, VIT Bhopal PYQ, VIT student tools, hostel menu VIT">
+
+  <meta name="author" content="Prayash Das">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="VITone – Everything for VIT Bhopal Students">
+  <meta property="og:description" content="Mess menu, PYQs, tools and more in one place.">
+  <meta property="og:image" content="https://vitone.netlify.app/preview.png">
+  <meta property="og:url" content="https://vitone.netlify.app/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VITone – VIT Bhopal Student Hub">
+  <meta name="twitter:description" content="Mess menu, PYQs, tools and more.">
+  <meta name="twitter:image" content="https://vitone.netlify.app/preview.png">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://vitone.netlify.app/">
+
   <style>
-    /* Footer */
+
+  /* NEW: Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* NEW: Page load animation */
+  body {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Footer */
 .footer {
   background: #0d2645;
   color: #cbd5f5;
@@ -40,6 +83,7 @@
 .footer-section a {
   color: #60a5fa;
   text-decoration: none;
+  transition: 0.3s; /* NEW */
 }
 
 .footer-section a:hover {
@@ -60,23 +104,16 @@
 
 .footer-btn:hover {
   background: #2563eb;
+  transform: translateY(-2px); /* NEW */
 }
 
-/* 📱 Mobile */
+/* Mobile */
 @media (max-width: 600px) {
   .footer {
     padding: 40px 15px;
   }
-
-  .footer-section h3 {
-    font-size: 16px;
-  }
-
-  .footer-section p {
-    font-size: 13px;
-  }
 }
-    
+
 .btn, .card, nav ul li {
   -webkit-user-select: none;
   user-select: none;
@@ -115,6 +152,7 @@ nav ul {
 
 nav ul li {
   cursor: pointer;
+  transition: 0.3s; /* NEW */
 }
 
 nav ul li:hover {
@@ -126,6 +164,7 @@ nav ul li:hover {
   margin-top: 65px;
   text-align: center;
   padding: 60px 20px;
+  animation: fadeIn 1s ease-in-out; /* NEW */
 }
 
 .hero h1 {
@@ -138,7 +177,7 @@ nav ul li:hover {
   color: gray;
 }
 
-/* ✅ Instagram Button */
+/* Instagram Button */
 .insta-btn {
   display: inline-flex;
   align-items: center;
@@ -151,7 +190,7 @@ nav ul li:hover {
   text-decoration: none;
   color: #111827;
   font-size: 14px;
-  transition: 0.25s;
+  transition: 0.3s;
 }
 
 .insta-btn img {
@@ -161,8 +200,8 @@ nav ul li:hover {
 }
 
 .insta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transform: translateY(-3px) scale(1.02); /* NEW */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* Cards */
@@ -180,7 +219,7 @@ nav ul li:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   text-align: center;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease; /* UPDATED */
   border: 1px solid #e5e7eb;
 }
 
@@ -196,13 +235,16 @@ nav ul li:hover {
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transform: translateY(-8px) scale(1.02); /* NEW */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-/* 📱 Mobile */
+/* Mobile */
 @media (max-width: 600px) {
-
+  #pyqs h2{
+    display: none;
+  }
+  
   nav {
     justify-content: center;
     padding: 15px 0;
@@ -218,33 +260,18 @@ nav ul li:hover {
   }
 
   .hero h1 {
+
     font-size: 36px;
-    line-height: 1.2;
   }
 
   .hero p {
     font-size: 16px;
   }
 
-  .insta-btn {
-    font-size: 13px;
-    padding: 8px 14px;
-  }
-
-  .insta-btn img {
-    width: 18px;
-    height: 18px;
-  }
-
   .card-container {
     grid-template-columns: 1fr;
     padding: 10px;
   }
-
-  .card {
-    padding: 20px;
-  }
-
 }
 
   </style>
@@ -253,7 +280,7 @@ nav ul li:hover {
 <body>
 
 <nav>
-  <h2><span style="color: rgb(38, 75, 242); font-size: 30px;">VIT</span>one</h2>
+  <h2 ><span style="color: rgb(38, 75, 242); font-size: 30px; ">VIT</span>one</h2>
   <ul>
     <li onclick="window.location.href='index.html'">Home</li>
     <li onclick="window.location.href='messmenu.html'">Mess Menu</li>
@@ -265,7 +292,7 @@ nav ul li:hover {
 
 <section class="hero">
   <h1>All you need in <span style="color: #20436f">ONE</span> place</h1>
-  <p>Mess Menu • PYQs • Cabs • Food Delivery</p>
+  <p>VITB Mess Menu • PYQs • Cabs • Food Delivery</p>
 
   <!-- ✅ Fixed Instagram -->
   <a href="https://www.instagram.com/vitoneforyou" class="insta-btn" target="_blank">
@@ -280,7 +307,7 @@ nav ul li:hover {
   <div class="card-container">
 
     <div class="card" onclick="window.location.href='messmenu.html'">
-      <h3>Mess Menus</h3>
+      <h3>VITB Mess Menus</h3>
       <p>see what's cooking..</p>
     </div>
 
