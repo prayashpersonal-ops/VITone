@@ -1,98 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Coming Soon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VITone Groceries</title>
 
-  <style>
-    .btn, .card, nav ul li {
-  -webkit-user-select: none;
-  user-select: none;
+<style>
+
+/* SAME BASE STYLE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-button, .card {
-  -webkit-tap-highlight-color: transparent;
+body {
+  background: #f5f7fb;
+  animation: fadeIn 0.8s ease-in-out;
 }
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #0f172a;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
 
-    .container {
-      text-align: center;
-      color: #9ca3af;
-    }
-
-    .main-text {
-      font-size: 18px;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    .sub-text {
-      font-size: 13px;
-      color: #6b7280;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      padding: 8px 16px;
-      font-size: 13px;
-      color: #9ca3af;
-      background: transparent;
-      border: 1px solid #374151;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #1e293b;
-      color: white;
-    }
-    @media (max-width: 600px) {
-
-  .main-text {
-    font-size: 26px;
-  }
-
-  .sub-text {
-    font-size: 18px;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 12px 22px;
-  }
-
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(10px);}
+  to {opacity:1; transform:translateY(0);}
 }
-  </style>
+
+/* Navbar */
+nav {
+  background: #0d2645;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  cursor: pointer;
+  transition: 0.3s; /* NEW */
+}
+
+nav ul li:hover {
+  color: #60a5fa;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+/* GRID */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 30px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FLIP CARD */
+.card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* FRONT */
+.card-front {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* BACK */
+.card-back {
+  background: #0d2645;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-back h3 {
+  font-size: 20px;
+}
+
+.card-back p {
+  font-size: 14px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
+
+ /* Footer */
+.footer {
+  background: #0d2645;
+  color: #cbd5f5;
+  padding: 50px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: 0.3s; /* NEW */
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Follow button */
+.footer-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #1e40af;
+  color: white !important;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px); /* NEW */
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 15px;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width:600px){
+  .hero h1 {
+    font-size: 28px;
+  }
+ 
+  nav {
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    <div class="main-text">
-      This service will be available soon.
-    </div>
-    <div class="sub-text">
-      We’re working on it. Stay tuned.
+<!-- NAVBAR -->
+<nav>
+  <h2 ><span style="color: rgb(38, 75, 242); font-size: 30px; ">VIT</span>one</h2>
+  <ul>
+    <li onclick="window.location.href='index.html'">Home</li>
+    <li onclick="window.location.href='messmenu.html'">Mess Menu</li>
+    <li onclick="window.location.href='pyq.html'">PYQs</li>
+    <li onclick="window.location.href='cabs.html'">Cabs</li>
+    <li onclick="window.location.href='food.html'">Food</li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1><span style="color:#2563eb;">VIT</span>one Groceries 🛒</h1>
+  <p>Order essentials directly to your hostel room</p>
+</section>
+
+<!-- ITEMS -->
+<div class="container" id="items"></div>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>
+        This site is built by Prayash, Devangpreet and Abhinav in a college dorm room (B347).  
+        We are 2025 batch students.
+      </p>
+      <p style="margin-top:10px;">
+        Instagram:
+        <a href="https://www.instagram.com/vitoneforyou" target="_blank">@vitoneforyou</a>
+      </p>
     </div>
 
-    <button class="btn" onclick="goBack()">← Go Back</button>
+    <!-- Disclaimer -->
+    <div class="footer-section">
+      <h3>Note</h3>
+      <p>
+        This website is built for the students of VIT (mainly VIT Bhopal) and is not officially affiliated with VIT.
+      </p>
+    </div>
+
+    <!-- FAQs -->
+    <div class="footer-section">
+      <h3>FAQs</h3>
+      <p><strong>How is this site maintained?</strong></p>
+      <p>• Our friends from different messes tell us about menu changes.</p>
+      <p>• We upload question papers regularly.</p>
+      <p>
+        • You can also upload papers here:
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrMFwhzIjf3OqzNUXdU8lGzbsMo_K9yBhq0FvJgDEKq9fL2g/viewform?usp=dialog" target="_blank">Submit PYQs</a>
+      </p>
+
+      <p style="margin-top:10px;">
+        For any queries, DM us:
+        <a href="https://www.instagram.com/vitoneforyou" target="_blank">Instagram</a>
+      </p>
+    </div>
+
+    <!-- Follow -->
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <p>
+        Follow us on Instagram so you don’t miss any updates.
+      </p>
+      <a href="https://www.instagram.com/vitoneforyou" target="_blank" class="footer-btn">
+        @vitoneforyou
+      </a>
+    </div>
+
   </div>
 
-  <script>
-    function goBack() {
-      window.history.back();
-    }
-  </script>
+</footer>
+
+<script>
+
+/* 🔥 EDIT ONLY THIS FOR INVENTORY */
+const items = [
+  {
+    name: "Maggi",
+    price: 39,
+    quantity: 6,
+    image: "maggi img2.png"
+  },
+  {
+    name: "Lay's",
+    price: 54,
+    quantity: 0,
+    image: "lays img.jpg"
+  },
+  {
+    name: "Doritos",
+    price: 54,
+    quantity: 0,
+    image: "Doritos img.png"
+  },
+  {
+    name: "Akash Chips",
+    price: 54,
+    quantity: 0,
+    image: "akash img.png"
+  },
+  {
+    name: "Crunchy Coated Peanuts",
+    price: 14,
+    quantity: 0,
+    image: "peanuts img.png"
+  },
+  {
+    name: "Oreo",
+    price: 34,
+    quantity: 0,
+    image: "oreo img.png"
+  },
+  {
+    name: "Tiger",
+    price: 34,
+    quantity: 2,
+    image: "tiger img.png"
+  },
+  {
+    name: "Good Day",
+    price: 34,
+    quantity: 2,
+    image: "good day img.png"
+  },
+];
+
+/* RENDER */
+function loadItems() {
+  const container = document.getElementById("items");
+
+  items.forEach(item => {
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <div class="card-inner">
+        
+        <div class="card-front">
+          <img src="${item.image}" />
+        </div>
+
+        <div class="card-back">
+          <div>
+            <h3>${item.name}</h3>
+            <p>Price: ₹${item.price}</p>
+            <p>Available: ${item.quantity}</p>
+          </div>
+
+          ${
+            item.quantity > 0
+            ? `<button class="btn" onclick="orderItem('${item.name}')">Order</button>`
+            : `<p style="color:red;">Out of Stock</p>`
+          }
+
+        </div>
+
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+/* WHATSAPP ORDER */
+function orderItem(name) {
+  const phone = "919330277325";
+
+  const message = `Hi, I want to order ${name} from VITone Groceries`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+}
+
+loadItems();
+
+</script>
 
 </body>
 </html>
