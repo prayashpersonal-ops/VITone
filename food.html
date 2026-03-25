@@ -215,6 +215,43 @@ nav ul li:hover {
   background: #2563eb;
   transform: translateY(-2px); /* NEW */
 }
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.close-btn {
+  background: #ccc;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
 /* Mobile */
 @media (max-width: 600px) {
@@ -415,20 +452,62 @@ function loadItems() {
   });
 }
 
-/* WHATSAPP ORDER */
+let selectedItem = "";
+
 function orderItem(name) {
+  selectedItem = name;
+  document.getElementById("orderModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("orderModal").style.display = "none";
+}
+
+function sendOrder() {
   const phone = "919330277325";
 
-  const message = `Hi, I want to order ${name} from VITone Groceries`;
+  const name = document.getElementById("name").value;
+  const block = document.getElementById("block").value;
+  const room = document.getElementById("room").value;
+  const flavour = document.getElementById("flavour").value || "NA";
+
+  if (!name || !block || !room) {
+    alert("Please fill all details");
+    return;
+  }
+
+  const message = `Hi, I want to order from VITone Groceries:
+
+Item: ${selectedItem}
+Name: ${name}
+Block: ${block}
+Room: ${room}
+Flavour: ${flavour}`;
 
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   window.open(url, "_blank");
+
+  closeModal();
 }
+
+
 
 loadItems();
 
 </script>
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <h2>Complete your order</h2>
 
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="block" placeholder="Block (1)">
+    <input type="text" id="room" placeholder="Room Number">
+    <input type="text" id="flavour" placeholder="Flavour (optional)">
+
+    <button onclick="sendOrder()" class="btn">Place Order</button>
+    <button onclick="closeModal()" class="close-btn">Cancel</button>
+  </div>
+</div>
 </body>
 </html>
